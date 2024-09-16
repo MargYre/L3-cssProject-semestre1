@@ -67,7 +67,14 @@ nav ul li a:hover {
 nav ul li:hover ul.dropdown {
     display: block;
 }
-
+.breadcrumb-nav {
+    list-style-type: none;
+    display: flex;
+}
+.breadcrumb-nav a {
+    text-decoration: none;
+    color: blue;
+}
 /* Media query pour petits écrans */
 @media (max-width: 768px) {
     .header {
@@ -84,4 +91,7 @@ nav ul li:hover ul.dropdown {
     nav ul li ul.dropdown {
         position: static;
     }
-}
+    .breadcrumb-nav {
+        justify-content: center;
+    }
+}   

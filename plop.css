@@ -3,16 +3,98 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     margin: 10px;
 }
-
 header {
-    background-color: tan;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
-    flex-wrap: wrap;
+    background-color: gray;
+}
+header img {
+    width: 25vw;
+    min-width: 200px;
+    height: 100%;
+}
+#recherche_conteneur {
+    grid-column: 4 / 5; /* Place la div recherche_conteneur dans la 4e colonne */
+    display: flex; /* Utilise Flexbox pour espacer les éléments */
+    justify-content: space-between; /* Espace l'input texte et le bouton OK */
+    width: 100%; /* Occupe toute la largeur de la colonne */
+}
+#recherche_conteneur form {
+    display: flex; /* Utilise Flexbox pour organiser les éléments */
+    justify-content: space-between; /* Espace l'input texte et le bouton OK */
+    width: 100%; /* Occupe toute la largeur disponible */
+}
+ul {
+    list-style-type: none;
+    background-color: gray;
+    display: flex;
     justify-content: space-between;
 }
+ul li {
+    border: 2px solid black;
+    display: inline-block;
+    position: relative;
+}
+ul li a {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 1.2em;
+}
+ul li ul.dropdown li {
+    display: block;
+}
+ul li ul.dropdown {
+    list-style-type: none;
+    padding-left: 0px;
+    width: 100%;
+    background-color: violet;
+    position: absolute;
+    /*z-index: 999;*/
+    display: none;
+}
+ul li a:hover {
+    background-color: lightgoldenrodyellow;
+}
+ul li:hover ul.dropdown {
+    display: block;
+}
 
+.test {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer en ligne suivante quand l'espace manque */
+    justify-content: space-between; /* Crée de l'espace entre les éléments */
+    width: 100%; /* Prend toute la largeur de l'écran */
+    height: 100%; /* Prend toute la hauteur de l'écran */
+}
+
+.box {
+    flex: 1 1 24%; /* Chaque case prend environ 24% de l'espace disponible, en laissant de la place entre elles */
+    min-width: 250px; /* Assure que les cases ne deviennent pas trop petites */
+    height: 100px; /* Hauteur des cases */
+    background-color: cornflowerblue;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+/* Media query pour petits écrans */
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+
+    #recherche_conteneur {
+        grid-column: 1 / -1; /* Le formulaire prend toute la largeur sur mobile */
+        margin-top: 10px;
+    }

@@ -27,20 +27,20 @@ header img {
     justify-content: space-between; /* Espace l'input texte et le bouton OK */
     width: 100%; /* Occupe toute la largeur disponible */
 }
-ul {
+nav ul {
     list-style-type: none;
     background-color: gray;
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-ul li {
+nav ul li {
     border: 2px solid black;
     display: inline-block;
     position: relative;
     flex: 1; /* Chaque rubrique prend une part égale de la largeur */
 }
-ul li a {
+nav ul li a {
     display: block;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -49,10 +49,10 @@ ul li a {
     text-align: center;
     font-size: 1.2em;
 }
-ul li ul.dropdown li {
+nav ul li ul.dropdown li {
     display: block;
 }
-ul li ul.dropdown {
+nav ul li ul.dropdown {
     list-style-type: none;
     padding-left: 0px;
     width: 100%;
@@ -61,11 +61,54 @@ ul li ul.dropdown {
     /*z-index: 999;*/
     display: none;
 }
-ul li a:hover {
+nav ul li a:hover {
     text-decoration: underline;
 }
-ul li:hover ul.dropdown {
+nav ul li:hover ul.dropdown {
     display: block;
+}
+.breadcrumb-nav {
+    list-style-type: none;
+    display: flex;
+}
+.breadcrumb-nav a {
+    text-decoration: none;
+    color: blue;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+main {
+    grid-column: 1 / 4;
+    background-color: lightsalmon;
+}
+.astuces {
+    grid-column: 4 / 5;
+    grid-row: 1;
+    background-color: powderblue;
+}
+.actualites {
+    grid-column: 4 / 5;
+    grid-row: 2;
+    background-color: lightgreen;
+}
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.main-content li {
+    list-style-type: none;
+}
+.main-content div {
+    display: flex;
+    flex-direction: column;
+}
+.main-content div a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 /* Media query pour petits écrans */
@@ -78,11 +121,33 @@ ul li:hover ul.dropdown {
         grid-column: 1 / -1; /* Le formulaire prend toute la largeur sur mobile */
         margin-top: 10px;
     }
-    ul {
+    nav ul {
         flex-direction: column;
         /*justify-content: flex-start;  Aligne à gauche */
     }
-    ul li ul.dropdown {
+    nav ul li ul.dropdown {
         position: static; /* permet aux dropdowns de rester sous leur rubrique respective sans se superposer. */
+    }
+    .breadcrumb-nav {
+        justify-content: center;
+    }
+    section {
+        grid-template-columns: 1fr;
+    }
+    main {
+        grid-column: 1 / -1;
+    }
+    .astuces, .actualites {
+        grid-column: 1 / -1;
+    }
+    .main-content {
+        grid-template-columns: 1fr;
+        align-items: center; 
+    }
+    .main-content div a {
+        justify-content: center;
+    }
+    .main-content ul li{
+        text-align:center;
     }
 }

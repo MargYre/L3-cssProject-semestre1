@@ -198,6 +198,18 @@ footer .footer-content {
 /* Media query pour petits écrans */
 @media (max-width: 768px) {
     /*header*/
+    header {
+        height: auto;
+    }
+    #rechercheInput {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .col-10.col-md-2.d-flex.justify-content-start.mt-2.mt-md-0, .col-2.col-md-1.d-flex.justify-content-center.justify-content-md-start.mt-2.mt-md-0 {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
     /*end*/
     nav ul {
         flex-direction: column;

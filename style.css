@@ -127,6 +127,7 @@ nav ul li:hover ul.dropdown {
     text-decoration: none;
     color: #0E5F96;
 }
+/*section/main*/
 section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -170,6 +171,14 @@ main h1 {
     align-items: center;
     text-decoration: none;
 }
+main ul {
+    padding-left: 1rem;
+}
+/*Sections*/
+aside ul {
+    padding-left: 1rem; /* Supprime le padding par défaut sur les listes dans les `aside` */
+    list-style-type: none; /* Supprime les puces de liste si elles apparaissent */
+}
 .astuces {
     grid-column: 4 / 5;
     grid-row: 1;
@@ -203,13 +212,14 @@ main h1 {
 .actualites li {
     list-style-type: none;
 }
+/*footer*/
 footer {
     display: flex;
     flex-direction: column;
     background-color: darkblue;
 }
 footer .footer-content {
-    background-color:cornflowerblue;
+    background-color:#428bca;
     display: flex;
 }
 .footer-content > ul {
@@ -221,6 +231,7 @@ footer .footer-content {
     flex-direction: column;
     text-align: left;
     padding-left: 20px;
+    color: white;
 }
 .footer-content > ul > li > p {
     margin: 0 0 5px 0; 

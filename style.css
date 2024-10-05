@@ -13,7 +13,7 @@ body {
 /******************************************************************************/
 /* Header */
 .col-md-6.col-xs-12.d-flex, .col-2,
-.col-1 {
+.col-1, .col-10 {
     padding: 0 !important;
     align-items: center;
 }
@@ -204,7 +204,7 @@ footer .footer-content {
     #rechercheInput {
         width: 100%;
         margin: 0;
-        padding: 0;
+        padding: 0 !important;
     }
     .col-10.col-md-2.d-flex.justify-content-start.mt-2.mt-md-0, .col-2.col-md-1.d-flex.justify-content-center.justify-content-md-start.mt-2.mt-md-0 {
         margin-left: 0 !important;

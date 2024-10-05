@@ -10,11 +10,12 @@ body {
     margin: 0;
     padding: 0;
 }
-/******************************************************************************/
 /* Header */
 .col-md-6.col-xs-12.d-flex, .col-2,
+.col-10.col-md-2d-flex.justify-content-start.mt-2.mt-md-0
 .col-1, .col-10 {
     padding: 0 !important;
+    margin: 0 !important;
     align-items: center;
 }
 .col-1 {
@@ -43,43 +44,69 @@ header {
     margin-left: auto;
     margin-right: 0;
 }
-/******************************************************************************/
-
+/*nav bar*/
+nav #nav-1 {
+    border: 1px solid lightsteelblue;
+    border-left: 1px solid transparent;
+}
+nav #nav-2, #nav-3 {
+    border: 1px solid lightsteelblue;
+    border-left: 1px solid transparent;
+}
+nav #nav-4 {
+    border: 1px solid lightsteelblue;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
 nav ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
-    background-color: #0E5F96; 
+    background: linear-gradient(0.5turn, #e3e3e3, white, #e3e3e3);
+    border-bottom: 2px solid #0E5F96;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0;
 }
 nav ul li {
-    border: 2px solid black;
     display: inline-block;
     position: relative;
     flex: 1;
 }
 nav ul li a {
     display: block;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     text-decoration: none;
-    color: black;
+    color: #0E5F96;
     text-align: center;
     font-size: 1.2em;
 }
+nav ul li a:hover {
+    color: #428bca;
+}
 nav ul li ul.dropdown li {
     display: block;
+    font-size: 12px;
+    padding: 0px;
+    margin: 0px;
 }
 nav ul li ul.dropdown {
+    border-top: 2px solid #0E5F96;
     list-style-type: none;
     padding-left: 0px;
     width: 100%;
     background-color: lightcyan;
     position: absolute;
-    /*z-index: 999;*/
     display: none;
+    padding: 0px;
+    margin: 0px;
 }
+nav ul li ul.dropdown {
+    margin: 0;
+    padding: 0;
+}
+
 nav ul li a:hover {
     text-decoration: underline;
 }
@@ -91,6 +118,7 @@ nav ul li:hover ul.dropdown {
     display: flex;
     padding: 0;
 }
+/*fil d'ariane*/
 .breadcrumb-nav a {
     text-decoration: none;
     color: blue;
@@ -204,7 +232,7 @@ footer .footer-content {
     #rechercheInput {
         width: 100%;
         margin: 0;
-        padding: 0 !important;
+        padding: 0;
     }
     .col-10.col-md-2.d-flex.justify-content-start.mt-2.mt-md-0, .col-2.col-md-1.d-flex.justify-content-center.justify-content-md-start.mt-2.mt-md-0 {
         margin-left: 0 !important;

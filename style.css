@@ -152,10 +152,13 @@ main {
     margin-right: 10px;
     border: 1px solid #e3e3e3;
     box-shadow: 0 4px 2px -2px lightgray;
-    height: 145%;
+    height: 125%;
 }
 main h1 {
     background-color: #0E5F96;
+}
+h1 + div {
+    color: #0E5F96;
 }
 .main-content {
     display: grid;
@@ -164,6 +167,11 @@ main h1 {
 }
 .main-content li {
     list-style-type: none;
+
+    padding-top: 30px;
+}
+.main-content img {
+    margin-left: 1rem;
 }
 .main-content div {
     display: flex;
@@ -173,6 +181,7 @@ main h1 {
     display: flex;
     align-items: center;
     text-decoration: none;
+    font-weight: bold;
 }
 main ul {
     padding-left: 1rem;
@@ -202,10 +211,25 @@ aside ul {
     color: white;
 }
 .astuces li {
+    padding-top: 20px;
+}
+.astuces li a {
     list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+.astuces .more a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    bottom: -91px;
+    left: -1px;
 }
 .astuces .more, .actualites .more {
     text-align: end;
+    text-decoration: none;
+    color: black;
 }
 .actualites {
     grid-column: 4/5;
@@ -223,6 +247,19 @@ aside ul {
 }
 .actualites li {
     list-style-type: none;
+}
+.actualites ul span {
+    color:#a94442;
+}
+.actualites li a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+.actualites .more a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #a94442;
 }
 /*footer*/
 footer {
@@ -309,10 +346,11 @@ footer .footer-content li::marker {
         grid-template-columns: 1fr;
     }
     main {
-        grid-column: 1 / 4;
+        grid-column: 1 / -1;
         display: inline-block; /* Ajuste la taille verticale selon le contenu */
         vertical-align: top;
         height: fit-content !important;
+        margin-bottom: 20px;
     }
     .empty-cell {
         grid-column: 1 / 1;
@@ -332,6 +370,9 @@ footer .footer-content li::marker {
     }
     .main-content ul li{
         text-align:center;
+    }
+    .astuces .actualites{
+        margin-top: 20px;
     }
     .footer-content {
         flex-direction: column;

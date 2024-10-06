@@ -10,7 +10,6 @@
 
 <body>
 	<div>
-		<!-- HEADER -->
 		<header class="container-fluid">
 			<div class="row align-items-center">
 				<div class="col-md-6 col-xs-12 col-sm-12 d-flex">
@@ -18,21 +17,18 @@
 				</div>
 				<div class="col-3 d-md-block d-xs-none d-sm-none"></div>
 				<div class="col-10 col-md-2 d-flex justify-content-start mt-2 mt-md-0">
-					<form class="w-100">
+					<form>
 						<input type="text" class="form-control" placeholder="Rechercher" id="rechercheInput">
 					</form>
 				</div>
-				<div class="col-2 col-md-1 d-flex justify-content-center justify-content-md-start mt-2 mt-md-0">
-					<input type="submit" value="ok" class="btn btn-primary" id="ok_recherche">
+				<div class="col-2 col-md-1 d-flex justify-content-start justify-content-md-start mt-2 mt-md-0">
+					<input type="submit" value="ok" class="" id="ok_recherche">
 				</div>
 			</div>
 		</header>
-		<!-- fin-->
-		
-
 		<nav>
 			<ul>
-				<li><a href="/jsp/en_savoir_plus_mon_tableau_de_bord.jsp">Mon tableau de bord</a>
+				<li id="nav-1"><a href="/jsp/en_savoir_plus_mon_tableau_de_bord.jsp">Mon tableau de bord</a>
 					<ul class="dropdown">
 						<li><a href="jsp/mes_liaisons.jsp">&gt; Mes liaisons de comptes</a></li>
 						<li><a href="jsp/mon_calendrier.jsp">&gt; Mon calendrier</a></li>
@@ -40,20 +36,20 @@
 					</ul> 
 					<span class="flecheActive"></span>
 				</li>
-				<li><a href="/jsp/en_savoir_plus_mes_documents.jsp">Mes documents</a>
+				<li id="nav-2"><a href="/jsp/en_savoir_plus_mes_documents.jsp">Mes documents</a>
 					<ul class="dropdown">
 						<li><a href="jsp/msp_documents.jsp">&gt; Mon porte-documents</a></li>
 						<li><a href="jsp/bloc_note.jsp">&gt; Mon bloc-notes</a></li>
 					</ul> 
 				</li>	
-				<li><a href="jsp/en_savoir_plus_mon_profils.jsp">Mon profil</a>
+				<li id="nav-3"><a href="jsp/en_savoir_plus_mon_profils.jsp">Mon profil</a>
 					<ul class="dropdown">
 						<li><a href="jsp/mon_etat_civil.jsp">&gt; Mes coordonnées</a></li>
 						<li><a href="jsp/ma_communaute.jsp">&gt; Mes contacts</a></li>
 						<li><a href="jsp/mes_options.jsp">&gt; Mes options</a></li>
 					</ul> 
 				</li>
-				<li><a href="jsp/en_savoir_plus_catalogue_des_services.jsp">Catalogue des services</a>
+				<li id="nav-4"><a href="jsp/en_savoir_plus_catalogue_des_services.jsp">Catalogue des services</a>
 					<ul class="dropdown">
 						<li><a href="jsp/les_demarches.jsp?menu=true">&gt; Les démarches</a></li>
 						<li><a href="jsp/les_formulaires.jsp?menu=true">&gt; Les formulaires CERFA</a></li>
@@ -98,7 +94,8 @@
 					</div>
 				</div>
 			</main>
-
+			 <!--Ajout d'une case vide pour ajuster le main--> 
+			 <div class="empty-cell"></div>
 			<aside>
 				<div class="astuces">
 					<h3>LES ASTUCES</h3>
@@ -107,6 +104,8 @@
 					</ul>
 					<div class="more"><a href="jsp/authent/toutes_astuces_msp.jsp">Toutes les astuces</a></div>
 				</div>
+			</aside>
+			<aside>
 				<div class="actualites">
 					<h3>Les actualités</h3>
 					<ul>
